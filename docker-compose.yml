@@ -19,7 +19,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./Ejecicio1-WEB-LOGIN/caso.html:/var/www/html
+      - ./Ejecicio1-WEB-LOGIN/:/var/www/html
     links:
       - mysql
       
