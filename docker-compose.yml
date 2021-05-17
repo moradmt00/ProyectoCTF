@@ -14,7 +14,7 @@ services:
     restart: always
     
   web:
-    image: php:8-apache
+    build: .
     container_name: docker-php
     ports:
       - "80:80"
