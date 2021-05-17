@@ -1,5 +1,5 @@
 <?php      
-    $host = "localhost:3306";  
+    $host = "p:localhost:3306";  
     $user = "proyecto";  
     $password = 'root';  
     $db_name = "proyecto";  
