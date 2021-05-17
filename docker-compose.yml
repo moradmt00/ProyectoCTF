@@ -12,10 +12,14 @@ services:
     ports:
       - "3306:3306"
     restart: always
-    web:
+    
+  web:
     image: php:7.3-apache
-    container-name: docker-php
+    container_name: docker-php
     ports:
       - "80:80"
     volumes:
       - ./Ejecicio1-WEB-LOGIN:/var/www/html
+    links:
+      - mysql
+      
