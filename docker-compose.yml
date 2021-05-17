@@ -20,8 +20,6 @@ services:
       - "80:80"
     volumes:
       - ./Ejecicio1-WEB-LOGIN/:/var/www/html
-    links:
-      - mysql
     depends on:
       - mysql
       
