@@ -11,8 +11,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
-    networks:
-      - pr-net  
     restart: always
     
   web:
@@ -24,9 +22,3 @@ services:
       - ./Ejecicio1-WEB-LOGIN/:/var/www/html
     depends_on:
       - mysql
-    networks:
-      - pr-net  
-      
-  networks:
-    pr-net:
-      driver: bridge
