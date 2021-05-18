@@ -12,6 +12,8 @@ services:
     ports:
       - "3306:3306"
     restart: always
+    networks:
+      - app-network
     
   web:
     build: .
@@ -22,3 +24,9 @@ services:
       - ./Ejecicio1-WEB-LOGIN/:/var/www/html
     depends_on:
       - mysql
+    networks:
+      - app-network  
+      
+  networks:
+        app-network:
+            driver: bridge  
