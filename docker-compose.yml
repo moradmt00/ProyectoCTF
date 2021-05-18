@@ -12,7 +12,8 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - default  
+      default:
+        ipv4_address: 172.18.0.2  
     restart: always
            
   web:
@@ -21,8 +22,17 @@ services:
     ports:
       - "80:80"
     networks:
-      - default  
+      default:
+        ipv4_address: 172.18.0.3    
     volumes:
       - ./Ejecicio1-WEB-LOGIN/:/var/www/html
     depends_on:
       - db
+ 
+ networks:
+  default:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 172.18.0.0/16
+         gateway: 172.18.0.1 
