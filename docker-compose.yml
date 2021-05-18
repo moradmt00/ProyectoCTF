@@ -32,4 +32,4 @@ services:
       - db
      
 volumes:
-    persistent:  
+     persistent:  
