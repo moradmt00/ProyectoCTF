@@ -27,6 +27,6 @@ services:
     volumes:
       - ./Ejecicio1-WEB-LOGIN/:/var/www/html
     depends_on:
-      - mysql
+      - db
      
       
