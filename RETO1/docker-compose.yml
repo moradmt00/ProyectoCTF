@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: docker-mysql
+    environment:
+      MYSQL_DATABASE: proyecto
+      MYSQL_USER: proyecto
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    networks:
+      default:
+        ipv4_address: 172.18.0.2  
+    restart: always
+           
+  web:
+    build: .
+    container_name: docker-php
+    ports:
+      - "80:80"
+    networks:
+      default:
+        ipv4_address: 172.18.0.3    
+    volumes:
+      - ./Ejecicio1-WEB-LOGIN/:/var/www/html
+    depends_on:
+      - db
