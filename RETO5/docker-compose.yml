@@ -5,4 +5,5 @@ services:
     container_name: web-lfi
     ports:
       - "80:80"  
-    volumes: ./docs:/var/www/html  
+    volumes: 
+       - ./docs:/var/www/html  
