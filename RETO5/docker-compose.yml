@@ -2,10 +2,6 @@ version: '3'
 services:
   web:
     build: .
-    container_name: docker-php
+    container_name: web-lfi
     ports:
       - "80:80"  
-    volumes:
-      - ./docs/:/var/www/html
-
-      
