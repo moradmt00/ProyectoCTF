@@ -1,4 +1,2 @@
-FROM php:7.4-apache
-COPY Php_demo_project/ /var/www/html/
-RUN chmod -R a+r /var/www/html/
-EXPOSE 80
+FROM httpd:2.4
+COPY ./docs/ /usr/local/apache2/htdocs/
