@@ -1,4 +1,4 @@
 <?php
 $filename = $_GET['$file'];
-include($filename); 
+include('.:/usr/local/lib/php' . $filename); 
 ?>
