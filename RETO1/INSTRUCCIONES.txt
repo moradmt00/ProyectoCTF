@@ -1,0 +1,9 @@
+1. Instala docker y docker-compose
+
+2. Ejecuta el docker con "docker-compose up -d"
+
+3. Introduce el siguiente comando para añadir la base de datos: "docker exec -i {id-contenedor} mysql -uproyecto -proot proyecto < localhost.sql" // Para saber el id "docker ps"
+
+4. Entra en http://localhost/caso.html y descubre la bandera.
+
+
